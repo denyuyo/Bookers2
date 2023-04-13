@@ -26,35 +26,35 @@
                 <% end %>
               </li>
               <li>
-                <%= link_to root_path ,class: "nav-link text-ligh" do %>
-                  <i class="fas fa-users"></i>Users
+                <%= link_to root_path ,class: "nav-link text-light" do %>
+                  <i class="fas fa-home"></i>Users
                 <% end %>
               </li>
               <li>
                 <%= link_to root_path ,class: "nav-link text-light" do %>
-                  <i class="fas fa-home"></i>Home
+                  <i class="fas fa-home"></i>Log out
                 <% end %>
               </li>
-              <!--  <a class="nav-link text-light" id:'users'>-->
-              <!--    <i class="fas fa-users"></i> Users</a></li>-->
-              <!--<li>-->
-              <!--  <a class="nav-link text-light" id:'books'>-->
-              <!--    <i class="fas fa-book-open"></i> Books </a></li>-->
-              <!--<li>-->
-              <!--  <a class="nav-link text-light" rel="nofollow" data-method="delete" id:'destroy_user_session'>-->
-              <!--    <i class="fas fa-sign-out-alt"></i> Log out</li>-->
             </ul>
           </div>
         </div>
       </nav>
-    <% else %>
-      <li>
-        <%= link_to "Sign up", new_user_registration_path %>
-      </li>
-      <li>
-        <%= link_to "Log in", new_user_session_path %>
-      </li>
-    <% end %>
+  
+      <div class="btn-wrapper col-10 mx-auto">
+        <div class="row">
+          <li>
+            <%= link_to new_user_registration,class: "btn btn-success btn-sm btn-block sign_up" %>
+              Sign up
+            <% end %>
+          </li>
+        </div>
+        <div class="row">
+          <li>
+            <%= link_to new_user_session, class: "btn btn-info btn-sm btn-block mb-3 sign_in" %>
+              Log in
+            <% end %>
+          </li>
+        </div>
   </header>
     <%= yield %>
 
@@ -67,5 +67,5 @@
       </div>
     </div>
   </footer>
-  </body>
+ </body>
 </html>

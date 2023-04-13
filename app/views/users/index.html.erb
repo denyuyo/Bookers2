@@ -29,38 +29,30 @@
               <i class="fas fa-book-open"></i> Books</a> </li>
           <li>
             <a class="nav-link text-light" rel="nofollow" data-method="delete" href="/users/sign_out">
-              <i class="fas fa-sign-out-alt"> <% if user_signed_in? %>
-      <li>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-      </li>
-    <% else %>
+              <i class="fas fa-sign-out-alt">
         </ul>
       </div>
     </div>
   </nav>
 </header>
-      <main>
-        <p id="notice">Welcome! You have signed up successfully.</p>
-        <div class='container px-5 px-sm-0'>
-  <div class='row'>
-    <div class='col-md-3'>
-      <h2>User info</h2>
-      <table class='table'>
-  <tr><img src="https://bookers-level2.herokuapp.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMzhYQkE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--abfa5bfcb85fd3c076140a6f78231101a0fd774e/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVdscGFRPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--4a929dbc7794f3c4610ba9ba5402762ad9cd1a14/default-image.jpg" /></tr>
-  <tr>
-	  <th>name</th>
-	  <th>oo</th>
-  </tr>
-  <tr>
-	  <th>introduction</th>
-	  <th></th>
-  </tr>
-</table>
+  <main>
+    <p id="notice"></p>
+      <div class="container">
+          <div class="row">
+            <div class='mx-auto col-11 col-sm-10 col-lg-8 col-xl-6'>
+              <h1>welcome to <i class="fas fa-book"></i><strong>Bookers</strong>  !!</h1>
+              <p>In  <i class="fas fa-book"></i><strong>Bookers</strong>, </p>
+              <p>you can share and exchange  your opinions , inpressions , and emotions</p>
+              <p> about various books!</p>
+            </div>
+          </div>
+      </div>
 　
 <div class='row'>
-  <a class="btn btn-outline-secondary btn-block edit_user_95983" href="/users/95983/edit">
+  <%= link_to dit_user_registration ,class:"btn btn-outline-secondary" do  %>
     <i class="fas fa-user-cog"></i>
-</a></div>
+  <% end %>
+</div>
       <h2 class="mt-3">New book</h2>
       <form action="/books" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="7c2ZZl9Wa5sSjWbSSFUN6S3EBW-sModtjSnbEbkxLxkroVUUzzApTA07dKHQAXl7TM15C67xIfDegET8DGVDDA" autocomplete="off" />
   <div class="form-group">
