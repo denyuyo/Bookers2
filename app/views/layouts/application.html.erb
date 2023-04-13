@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <header>
+    <% if user_signed_in? %>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" id:'homes#top'><span>Bookers</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+              <li>
+                <a class="nav-link text-light" id:'user_params_id'>
+                  <i class="fas fa-home"></i> Home</a></li>
+              <li>
+                <a class="nav-link text-light" id:'users'>
+                  <i class="fas fa-users"></i> Users</a></li>
+              <li>
+                <a class="nav-link text-light" id:'books'>
+                  <i class="fas fa-book-open"></i> Books </a></li>
+              <li>
+                <a class="nav-link text-light" rel="nofollow" data-method="delete" id:'destroy_user_session'>
+                  <i class="fas fa-sign-out-alt"></i> Log out</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <% else %>
+      <li>
+        <%= link_to "Sign up", new_user_registration_path %>
+      </li>
+      <li>
+        <%= link_to "Log in", new_user_session_path %>
+      </li>
+    <% end %>
+  </header>
+    <%= yield %>
+    
+  <footer>
+    <div class='container mt-5'>
+    	<div class='row'>
+      	<div class='mx-auto'>
+      		<p>CopyRight Infratop.inc</p>
+      	</div>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>
