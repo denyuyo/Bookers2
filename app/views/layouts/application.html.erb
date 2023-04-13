@@ -21,17 +21,28 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
               <li>
-                <a class="nav-link text-light" id:'user_params_id'>
-                  <i class="fas fa-home"></i> Home</a></li>
+                <%= link_to root_path ,class: "nav-link text-light" do %>
+                  <i class="fas fa-home"></i>Home
+                <% end %>
+              </li>
               <li>
-                <a class="nav-link text-light" id:'users'>
-                  <i class="fas fa-users"></i> Users</a></li>
+                <%= link_to root_path ,class: "nav-link text-ligh" do %>
+                  <i class="fas fa-users"></i>Users
+                <% end %>
+              </li>
               <li>
-                <a class="nav-link text-light" id:'books'>
-                  <i class="fas fa-book-open"></i> Books </a></li>
-              <li>
-                <a class="nav-link text-light" rel="nofollow" data-method="delete" id:'destroy_user_session'>
-                  <i class="fas fa-sign-out-alt"></i> Log out</li>
+                <%= link_to root_path ,class: "nav-link text-light" do %>
+                  <i class="fas fa-home"></i>Home
+                <% end %>
+              </li>
+              <!--  <a class="nav-link text-light" id:'users'>-->
+              <!--    <i class="fas fa-users"></i> Users</a></li>-->
+              <!--<li>-->
+              <!--  <a class="nav-link text-light" id:'books'>-->
+              <!--    <i class="fas fa-book-open"></i> Books </a></li>-->
+              <!--<li>-->
+              <!--  <a class="nav-link text-light" rel="nofollow" data-method="delete" id:'destroy_user_session'>-->
+              <!--    <i class="fas fa-sign-out-alt"></i> Log out</li>-->
             </ul>
           </div>
         </div>
@@ -46,7 +57,7 @@
     <% end %>
   </header>
     <%= yield %>
-    
+
   <footer>
     <div class='container mt-5'>
     	<div class='row'>
