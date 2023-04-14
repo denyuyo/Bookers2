@@ -27,25 +27,18 @@
               </li>
               <li>
                 <%= link_to root_path ,class: "nav-link text-light" do %>
-                  <i class="fas fa-home"></i>Home
+                  <i class="fas fa-home"></i>Users
                 <% end %>
               </li>
-               <%= link_to root_path ,class: "nav-link text-light" do %>
-                  <i class="fas fa-home"></i>Home
+              <li>
+                <%= link_to root_path ,class: "nav-link text-light" do %>
+                  <i class="fas fa-home"></i>Log out
                 <% end %>
               </li>
-              
             </ul>
           </div>
         </div>
       </nav>
-    <% else %>
-      <li>
-        <%= link_to "Sign up", new_user_registration %>
-      </li>
-      <li>
-        <%= link_to "Log in", new_user_session %>
-      </li>
     <% end %>
   </header>
     <%= yield %>
