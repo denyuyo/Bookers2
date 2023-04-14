@@ -11,10 +11,9 @@
 
   <body>
   <header>
-    <% if user_signed_in? %>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-          <a class="navbar-brand" id:'homes#top'><span>Bookers</span></a>
+          <a class="navbar-brand" href='/'><span>Bookers</span></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -27,19 +26,23 @@
               </li>
               <li>
                 <%= link_to root_path ,class: "nav-link text-light" do %>
-                  <i class="fas fa-home"></i>Users
+                  <i class="fas fa-link"></i>About
                 <% end %>
               </li>
               <li>
                 <%= link_to root_path ,class: "nav-link text-light" do %>
-                  <i class="fas fa-home"></i>Log out
+                  <i class="fas fa-user-plus"></i>Sign up
+                <% end %>
+              </li>
+              <li>
+                <%= link_to root_path ,class: "nav-link text-light" do %>
+                  <i class="fas fa-sign-in-alt"></i>Log in
                 <% end %>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-    <% end %>
   </header>
     <%= yield %>
 
