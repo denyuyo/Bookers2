@@ -1,40 +1,26 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="csrf-param" content="authenticity_token" />
-    <meta name="csrf-token" content="PeV_Znv70UAhVhvQMfqpawVQOIoG0WvESaoa0AlnLCVm5iCtYHdIJAPYMYYF0t5um6Y7wB9Jhg-BqvXm8pO_CA" />
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" media="all" href="/packs/css/application-859f38f5.css" data-turbolinks-track="reload" />
-    <script src="/packs/js/application-8c498bd08fe3c47f4c35.js" data-turbolinks-track="reload"></script>
-  </head>
-  <body>
-    <main>
-        <p id="notice"></p>
-      <div class='container'>
-        <div class='row'>
-          <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
-             <h2>User info</h2>
-             <form enctype="multipart/form-data" action="/users/95968" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="patch" autocomplete="off" /><input type="hidden" name="authenticity_token" value="y0W-1zBwwhWqb-L-GPo5cKYj2ahOlSzYRsbQzzRe2jizDeD-e5807a7Dt-OfOwL0MS9-Xtv7Poc9ay0U5JQYUA" autocomplete="off" />
-            <div class="form-group">
-              <label for="user_name">Name</label>
-              <input class="form-control name" type="text" value="rei" name="user[name]" id="user_name" />
-            </div>
-            <div class="form-group">
-              <label for="user_image">Image</label>
-              <input class="form-control-file user_image" accept="image/*" type="file" name="user[profile_image]" id="user_profile_image" />
-            </div>
-            <div class="form-group">
-              <label for="user_introduction">Introduction</label>
-              <textarea class="form-control introduction" name="user[introduction]" id="user_introduction">
-              </textarea>
-            </div>
-            <div class="form-group">
-              <input type="submit" name="commit" value="Update User" class="btn btn-secondary" data-disable-with="Update User" />
-            </div>
-           </form> 
+<p id="notice"></p>
+<div class='container'>
+  <div class='row'>
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+      <h2>User info</h2>
+      <form enctype="multipart/form-data" action="/users/96566" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="patch" autocomplete="off" /><input type="hidden" name="authenticity_token" value="H8bYESKMga35YR4KIhwwZDFlOY5s46Hf_-1j4vb6w947IcxPi6woKjHsR5yPe4snjvjQGVlfZOW64RaDsLRgfw" autocomplete="off" />
+        <div class="form-group">
+          <label for="user_name">Name</label>
+          <input class="form-control name" type="text" value="piyo" name="user[name]" id="user_name" />
         </div>
-      </div>
-    </main>
-  </body>
-</html>
+        <div class="form-group">
+          <label for="user_image">Image</label>
+          <input class="form-control-file user_image" accept="image/*" type="file" name="user[profile_image]" id="user_profile_image"/>
+        </div>
+        <div class="form-group">
+          <label for="user_introduction">Introduction</label>
+          <textarea class="form-control introduction" name="user[introduction]" id="user_introduction">
+          </textarea>
+        </div>
+        <div class="form-group">
+          <input type="submit" name="commit" value="Update User" class="btn btn-secondary" data-disable-with="Update User" />
+        </div>
+     </form>
+    </div>
+  </div>
+</div>

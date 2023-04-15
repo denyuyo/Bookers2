@@ -1,7 +1,12 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<p id="notice"></p>
+<div class='container'>
+  <div class='row'>
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0">
+      <h2>Edit <%= resource_name.to_s.humanize %></h2>
+      <form action="/users/sign_in" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="SrBTChbbkP-9pb7ymQjYhRSg2GjzhMjTss9qS65CuiofqI4eQLGeT8zpMwkoqwJPLHriOoiAhXskRRXu2gm2UQ" autocomplete="off" />
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
     <%= f.label :email %><br />
