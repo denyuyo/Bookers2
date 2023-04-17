@@ -2,9 +2,9 @@
 <div class='container px-5 px-sm-0'>
   <div class='row'>
     <div class='col-md-3'>
-       
+
          <%= image_tag current_user.get_user_image(100,100) %>
-       
+
        <table class="table">
          <tbody>
            <tr>
@@ -55,7 +55,7 @@
                 <tr>
                   <td><%= link_to @book.title %></td>
                   <td> <%= @book.body %></td>
-                  <td><%= link_to 'Edit', @book, class: "btn btn-secondary" %></td>
+                  <td><%= link_to 'Show', @book, class: "btn btn-secondary" %></td>
                 </tr>
               </tbody>
           </table>

@@ -24,7 +24,7 @@ class BooksController < ApplicationController
       redirect_to book_path(@book.id)
     else
       @books = Book.all
-      render root_path
+      render :index
     end
   end
 
@@ -42,7 +42,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     book.destroy
     flash[:notice] = "Book was successfully destroyed."
-    redirect_to book_path
+    redirect_to book_path(@book.id)
   end
 
   private
