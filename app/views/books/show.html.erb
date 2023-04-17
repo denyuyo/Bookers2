@@ -1,8 +1,8 @@
 <p id="notice"></p>
   <div class='container px-5 px-sm-0'>
-
     <div class='row'>
       <div class='col-md-3'>
+
            <%= image_tag current_user.get_user_image(100,100) %>
 
          <table class="table">
@@ -49,6 +49,10 @@
                   </tr>
                 </thead>
                 <tbody>
+                  <tr>
+                    <td><%=link_to @book.title %></td>
+                    <td><%= @book.body %></td>
+                  </tr>
                 </tbody>
           </table>
       </div>

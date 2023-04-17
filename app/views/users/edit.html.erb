@@ -22,6 +22,10 @@
                  <th><%= @user.name %></th>
                </tr>
                <tr>
+                  <th>image</th>
+                  <tr> <%= f.file_field :profile_image, accept: "image/*" %></tr>
+               </tr>
+               <tr>
                  <th>Introduction</th>
                  <th><%= @user.introduction %></th>
                </tr>
