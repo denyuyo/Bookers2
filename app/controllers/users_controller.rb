@@ -21,6 +21,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @user.update(user_params)
+    flash[:notice] = "You have updated user successfully."
     redirect_to user_path(@user)
   end
 
@@ -37,6 +38,7 @@ class UsersController < ApplicationController
 
   def is_matching_login_user
     user = current_user
+    flash[:notice] = "Welcome! You have signed up successfully."
     unless user.id == current_user.id
       redirect_to root_path
     end
