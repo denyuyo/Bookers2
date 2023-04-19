@@ -40,7 +40,7 @@ class UsersController < ApplicationController
     user = current_user
     flash[:notice] = "Welcome! You have signed up successfully."
     unless user.id == current_user.id
-      redirect_to root_path
+      redirect_to user_path(@user.id)
     end
   end
 
