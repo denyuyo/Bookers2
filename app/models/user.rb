@@ -6,11 +6,10 @@ class User < ApplicationRecord
   has_many :books, dependent: :destroy
   has_one_attached :profile_image
   
-   validates :name, uniqueness: { scope: :user, case_sensitive: false }
-   validates_confirmation_of :password
-  # validates_inclusion_of :name, in: 2..20
+   validates :name, uniqueness: true
+  
    validates :name,
-       length: { minimum: 2, maximum: 10 }
+       length: { minimum: 2, maximum: 20 }
    validates :introduction,
        length: { minimum: 0, maximum: 50 }
 

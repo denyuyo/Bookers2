@@ -1,17 +1,9 @@
 class UsersController < ApplicationController
 
   def show
-    @user = current_user
-    @userid = User.find(params[:id])
+    @user = User.find(params[:id])
     @book =Book.new
-    @books = Book.all
-  end
-
-  def create
-    @book = Book.new(book_params)
-    @book.user.id = current_user.id
-    @book = save
-    redirect_to book_path(@book)
+    @books = @user.books
   end
 
   def edit
@@ -40,7 +32,7 @@ class UsersController < ApplicationController
     user = current_user
     flash[:notice] = "Welcome! You have signed up successfully."
     unless user.id == current_user.id
-      redirect_to user_path(@user.id)
+      redirect_to user_path(current_user.id)
     end
   end
 
