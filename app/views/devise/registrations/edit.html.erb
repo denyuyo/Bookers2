@@ -13,6 +13,7 @@
          <% end %>
       <% end %>
 
+      <%= form_with model: @user do |f| %>
        <div class="form-group">
           <label for="user_name">Name</label>
           <%= @user.name %>

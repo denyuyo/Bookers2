@@ -12,9 +12,12 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @user.update(user_params)
+  if  @user.update(user_params)
     flash[:notice] = "You have updated user successfully."
     redirect_to user_path(@user)
+  else 
+    render :edit
+  end
   end
 
   def index
@@ -32,7 +35,7 @@ class UsersController < ApplicationController
     user = current_user
     flash[:notice] = "Welcome! You have signed up successfully."
     unless user.id == current_user.id
-      redirect_to user_path(current_user.id)
+      redirect_to book_path(current_user.id)
     end
   end
 

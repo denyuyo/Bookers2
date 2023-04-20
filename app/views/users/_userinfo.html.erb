@@ -2,17 +2,17 @@
   <div class='col-md-3'>
    <h2>User info</h2>
    
-   <%= image_tag current_user.get_user_image(100,100) %>
+   <%= image_tag user.get_user_image(100,100) %>
 
    <table class="table">
      <tbody>
        <tr>
          <th>name</th>
-         <th><%= current_user.name %></th>
+         <th><%= user.name %></th>
        </tr>
        <tr>
          <th>Introduction</th>
-         <th><%= current_user.introduction %></th>
+         <th><%= user.introduction %></th>
        </tr>
      </tbody>
    </table>
