@@ -10,7 +10,7 @@
             <tr>
               <td><%= link_to image_tag(@book.user.get_user_image(100,100)),user_path(@book.user) %>
               <a><%=  link_to @user.name,user_path(@user) %></a></td>
-              <td><%= link_to @book.title, book_path(@user) %></td>
+              <td><%= link_to @book.title, book_path(@book) %></td>
               <td><%= @book.body %></td>
              
              <% if @book.user == current_user.id %>
