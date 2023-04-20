@@ -7,7 +7,10 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = current_user
+  if @user = current_user
+  else 
+    render :index
+  end
   end
 
   def update
