@@ -1,8 +1,8 @@
 <p id="notice"></p>
 <div class='container px-5 px-sm-0'>
   <div class='row'>
-    <%= render 'users/userinfo', book: @books %>
-    <div id="error_explanation">
+  <%= render 'users/userinfo', user: @books %>
+
       <% if @book.errors.any? %>
          <h3> <%= @book.errors.count %>
             error prohibited this obj from being saved:</h3>
@@ -13,8 +13,7 @@
             <% end %>
           </ul>
         <% end %>
-      </div>
- 
+  
         <div class='col-md-8 offset-md-1'>
           <h2>Books</h2>
           <table class='table table-hover table-inverse'>
